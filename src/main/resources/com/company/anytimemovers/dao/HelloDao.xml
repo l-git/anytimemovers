@@ -1,0 +1,24 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.company.anytimemovers.dao.HelloDao">
+
+
+    <select id="select" resultType="hashmap">
+        select * from t_system_user
+    </select>
+
+    <insert id="insert" >
+
+        insert into t_system_user (username,password,create_date)
+        values (
+          #{username},
+          #{password},
+          #{createDate}
+        )
+
+    </insert>
+
+
+</mapper>
